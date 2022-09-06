@@ -26,18 +26,6 @@ int main(int argc, char* argv[]) {
 	ifstream input_file(argv[1], ios::in);
 	ofstream output_file(argv[2], ios::out);
 
-	//error management
-	if (argc != 3){
-		cout<<"Error: The number of arguments is bigger than needed."<<argv[0]<<"\nFormat: <exe> <input.txt> <output.txt>";
-		return -1;
-	}else if (input_file.fail()){
-		cout<<"Error: Cant open input file. ";
-		return -1;
-	}else if (output_file.fail()){
-		cout<<"Error: Cant create output file. ";
-		return -1;
-	}
-
 	input_file>>num_of_data;
 
 	//reading the vector of data
